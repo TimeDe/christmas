@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>christmas</title>
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/pageA.css">
+    <script src="../vender/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="http://img.mukewang.com/down/55ac9ea30001ace700000000.js"></script>
+    <script src="../src/js/observer.js"></script>
+    <script src="../src/js/pageA.js"></script>
+    <script src="../src/js/pageB.js"></script>
+    <script src="../src/js/pageC.js"></script>
+    <script src="../src/js/index.js"></script>
+</head>
+<body>
+<section class="container">
+    <section class="page-a bg-adaptive">
+        <figure class="moon"></figure>
+        <figure class="tree"></figure>
+        <figure class="cloudy"></figure>
+        <div class="chs-boy chs-boy-deer"></div>
+        <div class="window wood">
+            <div class="window-bg"></div>
+            <div class="window-content">
+                <div class="window-left"></div>
+                <div class="window-right"></div>
+            </div>
+        </div>
+    </section>
+    <section class="page-b bg-adaptive"></section>
+    <section class="page-c bg-adaptive"></section>
+</section>
+<button>点击场景切换</button>
+</body>
+<script type="text/javascript">
+    var     docEl = document.documentElement,
+            resizEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var container = document.querySelectorAll('.container')[0];
+                var proportion = 900/1440;
+                container.style.height = container.clientWidth * proportion + 'px';
+                docEl.style.fontSize = 20 * (docEl.clientWidth / 320) + 'px';
+            };
+    window.addEventListener(resizEvt, recalc, false);
+    document.addEventListener('DOMContentLoaded', recalc, false);
+</script>
+</html>
