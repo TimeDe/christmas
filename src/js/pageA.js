@@ -1,9 +1,10 @@
-function pageA(element){
+function pageA(element, pageComplete){
     this.$root = element;
     this.$boy = element.find('.chs-boy');
     this.$window = element.find('.window');
     this.$leftWin = this.$window.find('.window-left');
     this.$rightWin = this.$window.find('.window-right');
+    this.callback = pageComplete;
     this.run();
 }
 
@@ -56,7 +57,7 @@ pageA.prototype.run = function (fn) {
         })
         .then(function () {
             that.openWindow(function () {
-                alert('1')
+                that.callback && that.callback();
             })
         })
 };

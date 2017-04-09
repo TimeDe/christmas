@@ -50,9 +50,13 @@ var Observer = (function (slice) {
     function trigger(event) {
         var events = this.events,
             i,args,flag;
-        if(!events || event in events === false) return;
+        //console.log(events);
+        if(!events || event in events === false){
+            return;
+        }
 
         args = slice.call(arguments, 1);
+
         for(i=events[event].length-1;i>=0;i--){
             flag = events[event][i].apply(this, args);
         }

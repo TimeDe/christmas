@@ -27,21 +27,17 @@ var christmas = function () {
 
     var observer = new Observer();
 
-    new pageA($pageA);
-
-    observer.subscribe('pageB', function(){
-        new pageB(function () {
-            observer.publish('completeB');
-        })
-    });
-
-    observer.subscribe('pageC', function () {
-        new pageC()
+    //new pageA($pageA);
+    new pageA($pageA, function() {
+        observer.publish('completeA');
     });
 
     observer.subscribe('completeA', function () {
         changePage($pageA, 'effect-out', function () {
-            observer.publish('pageB');
+            $pageA.hide();
+            new pageB($pageB, function () {
+                observer.publish('completeB');
+            })
         })
     });
 
@@ -54,8 +50,9 @@ var christmas = function () {
 
 
 $(function () {
-    $('button').click(function () {
-        christmas();
-        var audio = HTML5Audio('http://www.sunnylinner.com/Games/Music/Media/407.mp3')
-    })
+    // $('button').click(function () {
+    //     christmas();
+    //     //var audio = HTML5Audio('http://www.sunnylinner.com/Games/Music/Media/407.mp3')
+    // })
+    christmas();
 });
