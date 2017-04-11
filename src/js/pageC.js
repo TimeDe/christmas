@@ -1,3 +1,3 @@
-function pageC(callback){
-
+function pageC(element){
+    alert('pageC');
 }

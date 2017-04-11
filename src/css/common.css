@@ -30,8 +30,10 @@
     -moz-transform-origin: 58.5% 73.5%;
 }
 @-webkit-keyframes effectIn {
+    0% {opacity: 0;}
     100% {-webkit-transform: scale(1);opacity: 1;}
 }
 @-moz-keyframes effectIn {
+    0% {opacity: 0;}
     100% {-moz-transform: scale(1);opacity: 1;}
 }

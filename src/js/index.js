@@ -43,7 +43,8 @@ var christmas = function () {
 
     observer.subscribe('completeB', function () {
         changePage($pageC, 'effect-in', function () {
-            observer.publish('pageC');
+            $pageB.hide();
+            new pageC($pageC);
         })
     })
 };
