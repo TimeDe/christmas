@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76401d4a-c3fb-4795-8685-81e70045b5ac" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/js/snowflake.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/common.css" afterPath="$PROJECT_DIR$/src/css/common.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/pageA.css" afterPath="$PROJECT_DIR$/src/css/pageA.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/pageB.css" afterPath="$PROJECT_DIR$/src/css/pageB.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/pageC.css" afterPath="$PROJECT_DIR$/src/css/pageC.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/pageB.js" afterPath="$PROJECT_DIR$/src/js/pageB.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/pageC.js" afterPath="$PROJECT_DIR$/src/js/pageC.js" />
-    </list>
+    <list default="true" id="76401d4a-c3fb-4795-8685-81e70045b5ac" name="Default" comment="" />
     <ignored path="christmas2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -336,15 +326,15 @@
       <workItem from="1491643283283" duration="687000" />
       <workItem from="1491644207456" duration="16025000" />
       <workItem from="1491750291782" duration="22228000" />
-      <workItem from="1491830381912" duration="28475000" />
+      <workItem from="1491830381912" duration="28637000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88567000" />
+    <option name="totallyTimeSpent" value="88729000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-17" y="178" width="1378" height="735" extended-state="0" />
+    <frame x="-17" y="178" width="1378" height="735" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26099926" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
