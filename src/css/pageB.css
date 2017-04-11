@@ -91,13 +91,33 @@
     display: none;
 }
 
+.cat{
+    width: 2rem;
+    height: 1.29rem;
+    background-image: url("../images/b/cat.png");
+    position: absolute;
+    left: 3.3rem;
+    top: 5.8rem;
+    background-size: 100% 100%;
+}
+
+.cat-book{
+    width: 2rem;
+    height: 1.29rem;
+    background-image: url("../images/b/cat-book.png");
+    background-size: 100% 100%;
+    position: absolute;
+    left: 3.3rem;
+    top: 5.8rem;
+}
+
 .girl{
     width: 3.5rem;
     height: 4.06rem;
     position: absolute;
     z-index: 10;
     left: 1rem;
-    top: 3.2rem;
+    top: 3.8rem;
     background: url("../images/b/girl.png");
     background-size: 2100% 100%;
 }

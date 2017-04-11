@@ -1,7 +1,7 @@
 function pageB(element, pageComplete) {
     var $boy = element.find('.christmas-boy');
     var $girl = element.find('.girl');
-    var $boyHead = element.find('.christmas-boy-head');
+    var $cat = element.find('.cat');
     var $carousel = element.find('#carousel');
     var animationEnd = 'animationend webkitAnimationEnd';
     var carousel = new Carousel($carousel, {
@@ -56,15 +56,26 @@ function pageB(element, pageComplete) {
     };
 
     var girlAction = {
+        // standUp: function () {
+        //     var dfd = $.Deferred();
+        //     setTimeout(function () {
+        //         $girl.addClass('girl-standUp');
+        //     }, 200);
+        //     setTimeout(function () {
+        //         $girl.addClass('girl-throwBook');
+        //         $cat.removeClass('cat').addClass('cat-book');
+        //         dfd.resolve();
+        //     }, 500);
+        //     return dfd;
+        // }
         standUp: function () {
             var dfd = $.Deferred();
-            setTimeout(function () {
-                $girl.addClass('girl-standUp');
-            }, 200);
-            setTimeout(function () {
-                $girl.addClass('girl-throwBook');
-                dfd.resolve();
-            }, 500);
+            $girl.addClass('girl-standUp').one(animationEnd, function () {
+                $girl.addClass('girl-throwBook').one(animationEnd, function () {
+                    $cat.removeClass('cat').addClass('cat-book');
+                    dfd.resolve();
+                });
+            });
             return dfd;
         },
         walk: function (callback) {
@@ -109,7 +120,7 @@ function pageB(element, pageComplete) {
                         dfd.resolve();
                     });
                 });
-            }, 10000);
+            }, 16000);
             return dfd;
         },
         weepWalk: function (callback) {
@@ -145,11 +156,6 @@ function pageB(element, pageComplete) {
             girlAction.stopWalk();
             return boyAction.unwrapp();
         })
-        // .then(function () {
-        //     setTimeout(function () {
-        //         return girlAction.choose(1)
-        //     }, 0)
-        // })
         .then(function () {
             return girlAction.chooseFirst(1);
         })
@@ -160,7 +166,6 @@ function pageB(element, pageComplete) {
             return girlAction.choose(3);
         })
         .then(function () {
-            //return boyAction.strip(1);
             setTimeout(function () {
                 boyAction.strip(1)
             }, 11000);

@@ -21,7 +21,7 @@ pageC.prototype.closeWindow = function () {
     var complete = function () {
         ++count;
         if(count == 2){
-            alert('窗关闭')
+
         }
     };
 

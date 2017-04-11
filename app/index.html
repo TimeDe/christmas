@@ -41,6 +41,9 @@
         </div>
     </section>
     <section class="page-c bg-adaptive">
+        <figure class="moon"></figure>
+        <figure class="tree"></figure>
+        <figure class="cloudy"></figure>
         <div class="window wood">
             <div class="window-content" data-attr="red">
                 <div class="window-scene-bg"></div>
@@ -49,20 +52,28 @@
                 <div class="window-right hover"></div>
             </div>
         </div>
+        <canvas id="snowflake"></canvas>
     </section>
 </section>
-<button>点击场景切换</button>
 </body>
 <script type="text/javascript">
-    var     docEl = document.documentElement,
-            resizEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-            recalc = function () {
-                var container = document.querySelectorAll('.container')[0];
-                var proportion = 900/1440;
-                container.style.height = container.clientWidth * proportion + 'px';
-                docEl.style.fontSize = 20 * (docEl.clientWidth / 320) + 'px';
-            };
-    window.addEventListener(resizEvt, recalc, false);
-    document.addEventListener('DOMContentLoaded', recalc, false);
+    var config = {};
+    (function (doc, win) {
+        var docEl = document.documentElement;
+        var resizEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        var recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth){
+                return;
+            }
+            docEl.style.fontSize = 20 * (docEl.clientWidth / 320) + 'px';
+            document.body.style.height = clientWidth * (900 / 1440) + 'px';
+            config.clientWidth = clientWidth;
+            config.clientHeight = clientWidth * (900 / 1440);
+        };
+        win.addEventListener(resizEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
 </script>
+<script src="../src/js/snowflake.js"></script>
 </html>
